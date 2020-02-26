@@ -369,7 +369,7 @@ export class Refresher implements ComponentInterface {
     writeTask(() => {
       if (this.scrollEl) {
         const style = this.scrollEl.style;
-        style.transform = ((y > 0) ? `translateY(${y}px) translateZ(0px)` : 'translateZ(0px)');
+        style.transform = ((y > 0) ? `translateY(${y}px) translateZ(0px)` : '');
         style.transitionDuration = duration;
         style.transitionDelay = delay;
         style.overflow = (overflowVisible ? 'hidden' : '');
