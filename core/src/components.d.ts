@@ -1997,6 +1997,10 @@ export namespace Components {
   }
   interface IonRefresher {
     /**
+    * programmatically trigger refresh
+    */
+    'autoRefresh': () => Promise<Boolean>;
+    /**
     * Changes the refresher's state from `refreshing` to `cancelling`.
     */
     'cancel': () => Promise<void>;
@@ -5316,6 +5320,10 @@ declare namespace LocalJSX {
     * If `true`, the refresher will be hidden.
     */
     'disabled'?: boolean;
+    /**
+    * Emitted when component initialized.
+    */
+    'onInitialized'?: (event: CustomEvent<void>) => void;
     /**
     * Emitted while the user is pulling down the content and exposing the refresher.
     */

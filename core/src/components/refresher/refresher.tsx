@@ -97,6 +97,11 @@ export class Refresher implements ComponentInterface {
    */
   @Event() ionStart!: EventEmitter<void>;
 
+  /**
+   * Emitted when component initialized.
+   */
+  @Event() initialized!: EventEmitter<void>;
+
   async connectedCallback() {
     if (this.el.getAttribute('slot') !== 'fixed') {
       console.error('Make sure you use: <ion-refresher slot="fixed">');
@@ -120,7 +125,7 @@ export class Refresher implements ComponentInterface {
       onMove: ev => this.onMove(ev),
       onEnd: () => this.onEnd(),
     });
-
+    this.initialized.emit();
     this.disabledChanged();
   }
 
@@ -166,6 +171,25 @@ export class Refresher implements ComponentInterface {
   @Method()
   getProgress() {
     return Promise.resolve(this.progress);
+  }
+
+  /**
+   * programmatically trigger refresh
+   *
+   */
+  @Method()
+  async autoRefresh():Promise<Boolean> {
+    if(!this.canStart()) {
+      return false;
+    }
+    if ((this.state & RefresherState._BUSY_) !== 0) {
+      return false;
+    }
+    this.progress = 100;
+    this.didStart = true;
+    this.ionStart.emit();
+    this.beginRefresh();
+    return  true;
   }
 
   private canStart(): boolean {

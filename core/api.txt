@@ -891,9 +891,11 @@ ion-refresher,prop,pullFactor,number,1,false,false
 ion-refresher,prop,pullMax,number,this.pullMin + 60,false,false
 ion-refresher,prop,pullMin,number,60,false,false
 ion-refresher,prop,snapbackDuration,string,'280ms',false,false
+ion-refresher,method,autoRefresh,autoRefresh() => Promise<Boolean>
 ion-refresher,method,cancel,cancel() => Promise<void>
 ion-refresher,method,complete,complete() => Promise<void>
 ion-refresher,method,getProgress,getProgress() => Promise<number>
+ion-refresher,event,initialized,void,true
 ion-refresher,event,ionPull,void,true
 ion-refresher,event,ionRefresh,RefresherEventDetail,true
 ion-refresher,event,ionStart,void,true

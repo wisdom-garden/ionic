@@ -30,6 +30,7 @@
     "loader/"
   ],
   "dependencies": {
+    "@types/vfile-message": "^2.0.0",
     "ionicons": "^4.6.3",
     "tslib": "^1.10.0"
   },

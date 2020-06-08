@@ -620,14 +620,15 @@ export class IonRefresher {
   ionRefresh!: EventEmitter<CustomEvent>;
   ionPull!: EventEmitter<CustomEvent>;
   ionStart!: EventEmitter<CustomEvent>;
+  initialized!: EventEmitter<CustomEvent>;
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ['ionRefresh', 'ionPull', 'ionStart']);
+    proxyOutputs(this, this.el, ['ionRefresh', 'ionPull', 'ionStart', 'initialized']);
   }
 }
-proxyMethods(IonRefresher, ['complete', 'cancel', 'getProgress']);
+proxyMethods(IonRefresher, ['complete', 'cancel', 'getProgress', 'autoRefresh']);
 proxyInputs(IonRefresher, ['closeDuration', 'disabled', 'pullFactor', 'pullMax', 'pullMin', 'snapbackDuration']);
 
 export declare interface IonRefresherContent extends Components.IonRefresherContent {}
