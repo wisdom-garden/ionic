@@ -3,11 +3,12 @@
 const fs = require("fs");
 const { execSync } = require("child_process");
 
-const {version } = require("./package.json");
+const { version, wgVersoin } = require("./package.json");
 
 const name = "ionic-core"
 const packFileName = `${name}-${version}.tgz`;
-const bucketFilePath = `frameworks/${packFileName}`;
+const packFileUploadName = `${name}-${version}-${wgVersoin}.tgz`;
+const bucketFilePath = `frameworks/${packFileUploadName}`;
 
 if (fs.existsSync(packFileName)) {
   fs.unlinkSync(packFileName);
