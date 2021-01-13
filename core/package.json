@@ -1,7 +1,7 @@
 {
   "name": "@ionic/core",
   "version": "4.11.10",
-  "wgVersoin": "1",
+  "wgVersoin": "2",
   "description": "Base components for Ionic",
   "keywords": [
     "ionic",

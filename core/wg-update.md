@@ -8,5 +8,10 @@
 
 ### wg versoin: 1
 - ion-refresh
-  * cherry-pick e3e5c696 [#20621](https://github.com/ionic-team/ionic/pull/20621) fix Refresher component is triggering by scrolling ion-scroll content  
+  * cherry-pick e3e5c696 [#20621](https://github.com/ionic-team/ionic/pull/20621) fix Refresher component is triggering by scrolling ion-scroll content
+
+
+### wg versoin: 2
+- overlays
+  * ModalOptions add noFirstInputFocus option, to disable auto focus on first input element.
   

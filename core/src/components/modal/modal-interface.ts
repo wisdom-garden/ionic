@@ -5,6 +5,7 @@ export interface ModalOptions<T extends ComponentRef = ComponentRef> {
   componentProps?: ComponentProps<T>;
   showBackdrop?: boolean;
   backdropDismiss?: boolean;
+  noFirstInputFocus?: boolean;
   cssClass?: string | string[];
   delegate?: FrameworkDelegate;
   animated?: boolean;

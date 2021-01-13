@@ -61,7 +61,7 @@ export const connectListeners = (doc: Document) => {
     // trap focus inside overlays
     doc.addEventListener('focusin', ev => {
       const lastOverlay = getOverlay(doc);
-      if (lastOverlay && lastOverlay.backdropDismiss && !isDescendant(lastOverlay, ev.target as HTMLElement)) {
+      if (lastOverlay && lastOverlay.noFirstInputFocus !== true && lastOverlay.backdropDismiss && !isDescendant(lastOverlay, ev.target as HTMLElement)) {
         const firstInput = lastOverlay.querySelector('input,button') as HTMLElement | null;
         if (firstInput) {
           firstInput.focus();
