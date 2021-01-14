@@ -325,6 +325,7 @@ export class Content implements ComponentInterface {
       >
         <div id="background-content" part="background"></div>
         <main
+          part="scroll"
           class={{
             'inner-scroll': true,
             'scroll-x': scrollX,
