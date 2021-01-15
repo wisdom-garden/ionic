@@ -321,6 +321,7 @@ export class Content implements ComponentInterface {
         }}
       >
         <main
+          part="scrolling"
           class={{
             'inner-scroll': true,
             'scroll-x': scrollX,

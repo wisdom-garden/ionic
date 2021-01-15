@@ -14,4 +14,8 @@
 ### wg versoin: 2
 - overlays
   * ModalOptions add noFirstInputFocus option, to disable auto focus on first input element.
+
+### wg versoin: 3
+- content
+  * just add attribute named 'part' to ion-content
   
