@@ -19,3 +19,6 @@
 - content
   * just add attribute named 'part' to ion-content
   
+### wg version 4
+- checkbox	
+	* cherry-pick 5f5b6aa7 [#19933](https://github.com/ionic-team/ionic-framework/pull/19933/commits/5f5b6aa79ec65d76e4dc15d88ff7743db2dcb040) feat(checkbox): add --checkmark-width variable
